@@ -16,7 +16,7 @@ export default function Rectangle(){
     return(
         <View style={styles.box}>
             <Text style={styles.textTitle}>คํานวณพื้นที่สี่เหลี่ยม</Text>
-            {/* <Button title="ไปปหน้า 2"/> */}
+            {/* <Button title="ไปหน้า 2"/> */}
 
             <Text>ความกว้าง คือ {width} ซม</Text>
             <Text>ความยาว คือ {length} ซม</Text>
@@ -25,7 +25,7 @@ export default function Rectangle(){
             <TextInput style={styles.textInput} 
              placeholder= "กรอกความกว้าง"
              placeholderTextColor ="blue" 
-             value={width.toString()}
+             value={width.toString()}         
              onChangeText={(w) =>setWidth(Number(w))}
              />
 

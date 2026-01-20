@@ -1,4 +1,4 @@
-import {View, Text, Button, StyleSheet} from "react-native";
+import {View, Text, Button, StyleSheet, TouchableOpacity} from "react-native";
 import {router, useRouter} from "expo-router";
 
 export default function App(){
@@ -6,23 +6,36 @@ export default function App(){
     const router = useRouter()
 
     return(
-        <View style={styles.box}>
-            <Text style={styles.textTitle}>Home</Text>
-            <Button title="ไปปหน้า 2" onPress={() => router.navigate('/rectangle')}/> 
+        <View style={styles.contaniner}>
+            <Text style={styles. mainTitle}>Home</Text>
+            <Button title="ไปหน้าคํานวณพื้นที่สี่เหลี่ยม" onPress={() => router.navigate('/rectangle')}/> 
+            <Button title="ไปหน้าคํานวณฟุตเป็นเมตร" onPress={() => router.navigate('/foot')} /> 
         </View>
+
     )
+
 }
 
+
+
+
+
 const styles = StyleSheet.create({
-    box:{
+    contaniner: {
         flex: 1,
-        backgroundColor:"black",
-        justifyContent:"center",
-        alignItems:"center"
+        backgroundColor: "pink",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 20
     },
-    textTitle:{
-        fontSize:22,
-        fontWeight:"700",
-        color:"white"
+    mainTitle: {
+        fontSize: 20,
+        fontWeight: "600"
+    },
+    textInput: {
+        borderWidth: 1,
+        width: "80%",
+        borderColor: "green"
     }
 })
+    
